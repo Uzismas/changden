@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.changden.com/sitemap.xml
+Sitemap: https://www.xn--72cf5au6jqd7be.com/sitemap.xml
