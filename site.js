@@ -5,7 +5,7 @@
 
   document.querySelectorAll('img[alt*="Logo"]').forEach((image) => {
     image.src = 'assets/logo.webp';
-    image.closest('a')?.setAttribute('href', 'index.html');
+    image.closest('a')?.setAttribute('href', '/');
   });
 
   document.querySelectorAll('img[src*="qrserver"]').forEach((image) => image.remove());
@@ -66,7 +66,7 @@
 
   document.querySelectorAll('a').forEach((link) => {
     const label = link.textContent.trim();
-    if (label === 'หน้าหลัก') link.href = 'index.html';
+    if (label === 'หน้าหลัก') link.href = '/';
     if (label === 'ผลงาน') link.href = 'work.html';
     if (label === 'ติดต่อเรา') link.href = 'contact.html';
     if (link.closest('nav') && ['หน้าหลัก', 'ผลงาน', 'ติดต่อเรา'].includes(label)) link.classList.add('site-nav-tab');
@@ -80,7 +80,7 @@
     }
   });
 
-  const pageName = location.pathname.toLowerCase().includes('work.html') ? 'work.html' : location.pathname.toLowerCase().includes('contact.html') ? 'contact.html' : 'index.html';
+  const pageName = location.pathname.toLowerCase().includes('work.html') ? 'work.html' : location.pathname.toLowerCase().includes('contact.html') ? 'contact.html' : '/';
   document.querySelectorAll('nav .site-nav-tab').forEach((link) => {
     const isCurrent = link.getAttribute('href') === pageName;
     link.classList.toggle('is-current', isCurrent);
@@ -198,7 +198,7 @@
           <div class="md:col-span-3 md:col-start-7">
             <p class="font-label-lg text-primary mb-3">เมนูหลัก</p>
             <div class="flex flex-col gap-3 font-body-md">
-              <a class="text-on-surface-variant hover:text-primary" href="index.html">หน้าหลัก</a>
+              <a class="text-on-surface-variant hover:text-primary" href="/">หน้าหลัก</a>
               <a class="text-on-surface-variant hover:text-primary" href="work.html">ผลงาน</a>
               <a class="text-on-surface-variant hover:text-primary" href="contact.html">ติดต่อเรา</a>
             </div>
