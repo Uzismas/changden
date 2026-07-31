@@ -199,6 +199,7 @@
             <p class="font-label-lg text-primary mb-3">เมนูหลัก</p>
             <div class="flex flex-col gap-3 font-body-md">
               <a class="text-on-surface-variant hover:text-primary" href="/">หน้าหลัก</a>
+              <a class="text-on-surface-variant hover:text-primary" href="roof-painting.html">รับทาสีหลังคาบ้าน</a>
               <a class="text-on-surface-variant hover:text-primary" href="work.html">ผลงาน</a>
               <a class="text-on-surface-variant hover:text-primary" href="contact.html">ติดต่อเรา</a>
             </div>
