@@ -1,11 +1,12 @@
 {
   "name": "changden",
   "version": "1.0.0",
-  "description": "Chang Den painting company website",
+  "description": "Chang Den roof painting, waterproofing and roof repair website",
   "main": "site.js",
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./dist/styles.css --minify",
-    "watch": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch"
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
+    "start": "node scripts/serve.mjs"
   },
   "keywords": [],
   "author": "",
