@@ -10,7 +10,8 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="preload" as="image" href="/assets/5e73e037-55fd-45ea-a861-56257103b5d5.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/5e73e037-55fd-45ea-a861-56257103b5d5-wide.webp" media="(min-width: 621px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/5e73e037-55fd-45ea-a861-56257103b5d5-mobile.webp" media="(max-width: 620px)" fetchpriority="high">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="th_TH">
   <meta property="og:site_name" content="ช่างเด่น">
@@ -22,8 +23,8 @@
   <meta name="theme-color" content="#063f76">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800;900&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800;900&amp;display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800;900&amp;display=swap" media="(min-width: 901px)" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" media="(min-width: 901px)" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800;900&amp;display=swap"></noscript>
   <link rel="stylesheet" href="/assets/site.css?v=20260802-facebook">
   <script type="application/ld+json">
   {
@@ -108,7 +109,10 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-media" src="/assets/5e73e037-55fd-45ea-a861-56257103b5d5.webp" alt="ทีมช่างเด่นกำลังพ่นสีหลังคา" width="1600" height="900" fetchpriority="high">
+      <picture>
+        <source media="(max-width: 620px)" srcset="/assets/5e73e037-55fd-45ea-a861-56257103b5d5-mobile.webp">
+        <img class="hero-media" src="/assets/5e73e037-55fd-45ea-a861-56257103b5d5-wide.webp" alt="ทีมช่างเด่นกำลังพ่นสีหลังคา" width="1280" height="720" fetchpriority="high">
+      </picture>
       <div class="container">
         <div class="hero-content">
           <p class="eyebrow">ช่างงานหลังคา ประสบการณ์มากกว่า 5 ปี</p>
@@ -139,20 +143,20 @@
           <p class="section-intro">เลือกวิธีทำงานตามชนิดหลังคา สภาพพื้นผิว ปัญหาหน้างาน และวัตถุประสงค์ของเจ้าของพื้นที่</p>
         </div>
         <div class="services-grid">
-          <article class="service-card wide"><figure><img src="/assets/AFTER.webp" alt="ผลงานรับทาสีหลังคาบ้านสีน้ำเงิน" loading="lazy" width="1160" height="870"></figure><div class="service-body"><span class="service-number">บริการ 01</span><h3>รับทาสีหลังคาบ้าน</h3><p>ฟื้นสภาพหลังคากระเบื้องหรือเมทัลชีท ด้วยการตรวจพื้นผิว ทำความสะอาด และลงระบบสีให้เหมาะกับหลังคาเดิม</p></div></article>
-          <article class="service-card wide"><figure><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370004.webp" alt="พ่นสีเซรามิกกันความร้อนบนหลังคาโรงงาน" loading="lazy"></figure><div class="service-body"><span class="service-number">บริการ 02</span><h3>พ่นสีเซรามิกกันความร้อน</h3><p>เคลือบผิวหลังคาเพื่อลดการสะสมความร้อน เหมาะกับพื้นที่ที่ต้องการควบคุมอุณหภูมิใต้หลังคา</p></div></article>
-          <article class="service-card"><figure><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370012.webp" alt="งานเคลือบกันซึมบนพื้นผิวหลังคา" loading="lazy"></figure><div class="service-body"><span class="service-number">บริการ 03</span><h3>งานกันซึม</h3><p>ตรวจจุดเสี่ยง รอยต่อ และพื้นผิวก่อนเลือกวัสดุกันซึมให้เหมาะกับลักษณะหน้างาน</p></div></article>
-          <article class="service-card"><figure><img src="/assets/BEFORE.webp" alt="สภาพหลังคาก่อนซ่อมแซมรอยรั่ว" loading="lazy" width="1160" height="870"></figure><div class="service-body"><span class="service-number">บริการ 04</span><h3>ซ่อมแซมรอยรั่วหลังคา</h3><p>สำรวจต้นเหตุของน้ำรั่วซึมและซ่อมจุดเสียหายตามวัสดุและสภาพหลังคาจริง</p></div></article>
-          <article class="service-card"><figure><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370001.webp" alt="ทีมช่างรับทาสีโรงงาน" loading="lazy"></figure><div class="service-body"><span class="service-number">บริการ 05</span><h3>รับทาสีโรงงาน</h3><p>งานทาสีพื้นที่โรงงานโดยทีมช่างที่เข้าใจขนาดพื้นที่ การเตรียมหน้างาน และความปลอดภัยในการทำงาน</p></div></article>
-          <article class="service-card wide"><figure><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370002.webp" alt="รับทาสีหลังคาอาคาร" loading="lazy"></figure><div class="service-body"><span class="service-number">บริการ 06</span><h3>รับทาสีหลังคาอาคาร</h3><p>ดูแลหลังคาอาคารพาณิชย์และอาคารขนาดใหญ่ ตั้งแต่ประเมินพื้นผิวจนถึงตรวจความเรียบร้อยหลังจบงาน</p></div></article>
-          <article class="service-card wide"><figure><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370008.webp" alt="รับทาสีหลังคาโกดังขนาดใหญ่" loading="lazy"></figure><div class="service-body"><span class="service-number">บริการ 07</span><h3>รับทาสีหลังคาโกดัง</h3><p>ทาสีและเคลือบผิวหลังคาโกดัง โดยวางลำดับการทำงานให้เหมาะกับพื้นที่ใช้งานและสภาพหลังคา</p></div></article>
+          <article class="service-card wide"><figure><img src="/assets/AFTER-card.webp" alt="ผลงานรับทาสีหลังคาบ้านสีน้ำเงิน" loading="lazy" width="640" height="360"></figure><div class="service-body"><span class="service-number">บริการ 01</span><h3>รับทาสีหลังคาบ้าน</h3><p>ฟื้นสภาพหลังคากระเบื้องหรือเมทัลชีท ด้วยการตรวจพื้นผิว ทำความสะอาด และลงระบบสีให้เหมาะกับหลังคาเดิม</p></div></article>
+          <article class="service-card wide"><figure><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370004-card.webp" alt="พ่นสีเซรามิกกันความร้อนบนหลังคาโรงงาน" loading="lazy" width="640" height="360"></figure><div class="service-body"><span class="service-number">บริการ 02</span><h3>พ่นสีเซรามิกกันความร้อน</h3><p>เคลือบผิวหลังคาเพื่อลดการสะสมความร้อน เหมาะกับพื้นที่ที่ต้องการควบคุมอุณหภูมิใต้หลังคา</p></div></article>
+          <article class="service-card"><figure><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370012-card.webp" alt="งานเคลือบกันซึมบนพื้นผิวหลังคา" loading="lazy" width="640" height="360"></figure><div class="service-body"><span class="service-number">บริการ 03</span><h3>งานกันซึม</h3><p>ตรวจจุดเสี่ยง รอยต่อ และพื้นผิวก่อนเลือกวัสดุกันซึมให้เหมาะกับลักษณะหน้างาน</p></div></article>
+          <article class="service-card"><figure><img src="/assets/BEFORE-card.webp" alt="สภาพหลังคาก่อนซ่อมแซมรอยรั่ว" loading="lazy" width="640" height="360"></figure><div class="service-body"><span class="service-number">บริการ 04</span><h3>ซ่อมแซมรอยรั่วหลังคา</h3><p>สำรวจต้นเหตุของน้ำรั่วซึมและซ่อมจุดเสียหายตามวัสดุและสภาพหลังคาจริง</p></div></article>
+          <article class="service-card"><figure><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370001-card.webp" alt="ทีมช่างรับทาสีโรงงาน" loading="lazy" width="640" height="360"></figure><div class="service-body"><span class="service-number">บริการ 05</span><h3>รับทาสีโรงงาน</h3><p>งานทาสีพื้นที่โรงงานโดยทีมช่างที่เข้าใจขนาดพื้นที่ การเตรียมหน้างาน และความปลอดภัยในการทำงาน</p></div></article>
+          <article class="service-card wide"><figure><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370002-card.webp" alt="รับทาสีหลังคาอาคาร" loading="lazy" width="640" height="360"></figure><div class="service-body"><span class="service-number">บริการ 06</span><h3>รับทาสีหลังคาอาคาร</h3><p>ดูแลหลังคาอาคารพาณิชย์และอาคารขนาดใหญ่ ตั้งแต่ประเมินพื้นผิวจนถึงตรวจความเรียบร้อยหลังจบงาน</p></div></article>
+          <article class="service-card wide"><figure><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370008-card.webp" alt="รับทาสีหลังคาโกดังขนาดใหญ่" loading="lazy" width="640" height="360"></figure><div class="service-body"><span class="service-number">บริการ 07</span><h3>รับทาสีหลังคาโกดัง</h3><p>ทาสีและเคลือบผิวหลังคาโกดัง โดยวางลำดับการทำงานให้เหมาะกับพื้นที่ใช้งานและสภาพหลังคา</p></div></article>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container split">
-        <div class="media-frame"><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370009.webp" alt="ทีมช่างเด่นทำงานบนหลังคาโรงงาน" loading="lazy"></div>
+        <div class="media-frame"><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370009-media.webp" alt="ทีมช่างเด่นทำงานบนหลังคาโรงงาน" loading="lazy" width="640" height="480"></div>
         <div>
           <div class="section-head">
             <p class="kicker">ตรวจให้ตรงจุดก่อนเริ่ม</p>
@@ -195,7 +199,7 @@
           </div>
           <div class="actions"><a class="button outline" href="/work.html">ดูภาพผลงานทั้งหมด →</a></div>
         </div>
-        <div class="media-frame"><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370007.webp" alt="ผลงานพ่นเซรามิกกันความร้อน บริษัท RTD ระยอง" loading="lazy"></div>
+        <div class="media-frame"><img src="/assets/พ่นกันร้อนบริษัทRTDระยอง/370007-media.webp" alt="ผลงานพ่นเซรามิกกันความร้อน บริษัท RTD ระยอง" loading="lazy" width="640" height="480"></div>
       </div>
     </section>
 
