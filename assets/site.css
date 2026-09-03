@@ -156,6 +156,16 @@ h2 { margin: 0; color: var(--blue-dark); font-size: clamp(30px, 4vw, 46px); line
 .before-after figure { margin: 0; border: 1px solid var(--line); overflow: hidden; border-radius: 6px; }
 .before-after img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .before-after figcaption { padding: 12px 16px; font-weight: 800; }
+.job-facts { margin: 0 0 28px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.job-facts li { padding: 17px 18px; background: white; border-left: 4px solid var(--orange); }
+.job-facts strong, .job-facts span { display: block; }
+.job-facts strong { color: var(--blue-dark); font-size: 14px; }
+.job-facts span { margin-top: 4px; color: var(--muted); }
+.job-compare { margin-bottom: 40px; }
+.latest-gallery-group + .latest-gallery-group { margin-top: 42px; }
+.gallery-title { margin: 0 0 16px; color: var(--blue-dark); font-size: 23px; }
+.latest-gallery .work-item { aspect-ratio: 4 / 3; }
+.latest-gallery .work-item.featured { min-height: 420px; }
 
 .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .contact-method { padding: 28px; border: 1px solid var(--line); border-top: 4px solid var(--orange); }
@@ -223,6 +233,7 @@ h2 { margin: 0; color: var(--blue-dark); font-size: clamp(30px, 4vw, 46px); line
   .service-card, .service-card.wide { grid-column: 1 / -1; }
   .split { gap: 34px; }
   .steps, .work-grid, .contact-grid, .before-after, .footer-grid { grid-template-columns: 1fr; }
+  .job-facts { grid-template-columns: 1fr; }
   .work-item.featured { grid-column: auto; grid-row: auto; min-height: auto; aspect-ratio: 4 / 3; }
   .social-gallery .work-item:last-child { grid-column: auto; aspect-ratio: 1 / 1; }
   .contact-method:last-child { grid-column: auto; }
