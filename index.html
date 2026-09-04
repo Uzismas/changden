@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="image" href="/assets/5e73e037-55fd-45ea-a861-56257103b5d5-wide.webp" media="(min-width: 621px)" fetchpriority="high">
-  <link rel="preload" as="image" href="/assets/5e73e037-55fd-45ea-a861-56257103b5d5-mobile.webp" media="(max-width: 620px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/hero-mobile-480.webp" media="(max-width: 620px)" fetchpriority="high">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="th_TH">
   <meta property="og:site_name" content="ช่างเด่น">
@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800;900&amp;display=swap" media="(min-width: 901px)" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" media="(min-width: 901px)" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800;900&amp;display=swap"></noscript>
-  <link rel="stylesheet" href="/assets/site.css?v=20260903-rayong">
+  <link rel="stylesheet" href="/assets/site.css?v=20260904-mobile">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -100,7 +100,7 @@
   <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
   <header class="site-header">
     <div class="container nav-shell">
-      <a class="brand" href="/" aria-label="ช่างเด่น หน้าหลัก"><img src="/assets/logo.webp" alt="โลโก้ช่างเด่น" width="500" height="500"></a>
+      <a class="brand" href="/" aria-label="ช่างเด่น หน้าหลัก"><img src="/assets/logo-nav.webp" alt="โลโก้ช่างเด่น" width="160" height="160"></a>
       <nav class="nav-links" data-menu aria-label="เมนูหลัก">
         <a href="/" aria-current="page">หน้าหลัก</a>
         <a href="/roof-painting.html">บริการงานหลังคา</a>
@@ -118,7 +118,7 @@
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <picture>
-        <source media="(max-width: 620px)" srcset="/assets/5e73e037-55fd-45ea-a861-56257103b5d5-mobile.webp">
+        <source media="(max-width: 620px)" srcset="/assets/hero-mobile-480.webp">
         <img class="hero-media" src="/assets/5e73e037-55fd-45ea-a861-56257103b5d5-wide.webp" alt="ทีมช่างเด่นกำลังพ่นสีหลังคา" width="1280" height="720" fetchpriority="high">
       </picture>
       <div class="container">
@@ -145,6 +145,7 @@
 
     <section class="section latest-work-teaser" aria-labelledby="latest-work-title">
       <div class="container split">
+        <a class="mobile-card-link" href="/work.html#ban-don-rayong" aria-label="ดูรายละเอียดงานพ่นสีหลังคาบ้าน บ้านดอน จังหวัดระยอง"></a>
         <div>
           <div class="section-head">
             <p class="kicker">ผลงานล่าสุด · ระยอง</p>
@@ -153,7 +154,7 @@
           </div>
           <div class="actions"><a class="button primary" href="/work.html#ban-don-rayong">ดูผลงานล่าสุด</a><a class="button outline" href="https://line.me/ti/p/~den432524" target="_blank" rel="noopener">ส่งภาพให้ประเมิน</a></div>
         </div>
-        <div class="media-frame"><img src="/assets/ban-don-rayong/painted-01.webp" alt="ภาพรวมหลังพ่นสีหลังคาบ้าน บ้านดอน ต.นาขวัญ จังหวัดระยอง" loading="lazy" width="1477" height="1108"></div>
+        <div class="media-frame"><picture><source media="(max-width: 620px)" srcset="/assets/ban-don-rayong/painted-01-mobile.webp"><img src="/assets/ban-don-rayong/painted-01.webp" alt="ภาพรวมหลังพ่นสีหลังคาบ้าน บ้านดอน ต.นาขวัญ จังหวัดระยอง" loading="lazy" width="1477" height="1108"></picture><span class="mobile-card-cta">แตะเพื่อดูรายละเอียดและรูปทั้งหมด <b>→</b></span></div>
       </div>
     </section>
 

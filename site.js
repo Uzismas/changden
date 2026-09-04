@@ -39,6 +39,20 @@
     node.textContent = new Date().getFullYear();
   });
 
+  const projectToggle = document.querySelector('[data-project-toggle]');
+  const projectDetails = document.querySelector('[data-project-details]');
+
+  if (projectToggle && projectDetails) {
+    projectToggle.addEventListener('click', function () {
+      const open = projectDetails.classList.toggle('open');
+      projectToggle.setAttribute('aria-expanded', String(open));
+      projectToggle.querySelector('b').textContent = open ? '−' : '＋';
+      if (open) {
+        projectDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
   const conversionTargets = {
     phone: 'AW-18365659298/cerJCKXMwNwcEKLxtrVE',
     line: 'AW-18365659298/iHb8CLzkyNwcEKLxtrVE'

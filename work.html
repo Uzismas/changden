@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800;900&amp;display=swap" media="(min-width: 901px)" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" media="(min-width: 901px)" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800;900&amp;display=swap"></noscript>
-  <link rel="stylesheet" href="/assets/site.css?v=20260903-rayong">
+  <link rel="stylesheet" href="/assets/site.css?v=20260904-mobile">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"CollectionPage","name":"ผลงานทาสีหลังคาและพ่นสีเซรามิก","url":"https://xn--72cf5au6jqd7be.com/work.html","isPartOf":{"@id":"https://xn--72cf5au6jqd7be.com/#website"},"about":{"@id":"https://xn--72cf5au6jqd7be.com/#business"},"breadcrumb":{"@id":"https://xn--72cf5au6jqd7be.com/work.html#breadcrumb"}}
   </script>
@@ -44,7 +44,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
-  <header class="site-header"><div class="container nav-shell"><a class="brand" href="/" aria-label="ช่างเด่น หน้าหลัก"><img src="/assets/logo.webp" alt="โลโก้ช่างเด่น" width="500" height="500"></a><nav class="nav-links" data-menu aria-label="เมนูหลัก"><a href="/">หน้าหลัก</a><a href="/roof-painting.html">บริการงานหลังคา</a><a href="/work.html" aria-current="page">ผลงาน</a><a href="/contact.html">ติดต่อเรา</a></nav><div class="nav-actions"><a class="icon-btn line" href="https://line.me/ti/p/~den432524" target="_blank" rel="noopener" aria-label="ติดต่อทาง LINE"><img src="/assets/LINE_logo.webp" alt=""></a><a class="icon-btn phone" href="tel:0956862586" aria-label="โทร 095-686-2586">☎</a><button class="icon-btn menu-button" type="button" data-menu-button aria-label="เปิดเมนู" aria-expanded="false">☰</button></div></div></header>
+  <header class="site-header"><div class="container nav-shell"><a class="brand" href="/" aria-label="ช่างเด่น หน้าหลัก"><img src="/assets/logo-nav.webp" alt="โลโก้ช่างเด่น" width="160" height="160"></a><nav class="nav-links" data-menu aria-label="เมนูหลัก"><a href="/">หน้าหลัก</a><a href="/roof-painting.html">บริการงานหลังคา</a><a href="/work.html" aria-current="page">ผลงาน</a><a href="/contact.html">ติดต่อเรา</a></nav><div class="nav-actions"><a class="icon-btn line" href="https://line.me/ti/p/~den432524" target="_blank" rel="noopener" aria-label="ติดต่อทาง LINE"><img src="/assets/LINE_logo.webp" alt=""></a><a class="icon-btn phone" href="tel:0956862586" aria-label="โทร 095-686-2586">☎</a><button class="icon-btn menu-button" type="button" data-menu-button aria-label="เปิดเมนู" aria-expanded="false">☰</button></div></div></header>
 
   <main id="main">
     <header class="page-hero">
@@ -73,9 +73,13 @@
           <li><strong>ประเภทงาน</strong><span>พ่นสีหลังคาบ้าน</span></li>
           <li><strong>สถานะ</strong><span>ดำเนินงานเสร็จแล้ว</span></li>
         </ul>
+        <button class="project-detail-toggle" type="button" aria-expanded="false" aria-controls="ban-don-details" data-project-toggle>
+          <span><strong>ดูภาพก่อน–หลังและขั้นตอนทั้งหมด</strong><small>รวม 13 ภาพจากหน้างานจริง</small></span><b aria-hidden="true">＋</b>
+        </button>
+        <div class="project-details" id="ban-don-details" data-project-details>
         <div class="before-after job-compare">
           <figure><img src="/assets/ban-don-rayong/before-04.webp" alt="สภาพหลังคาบ้านที่บ้านดอน ระยองก่อนพ่นสี" loading="lazy" width="1477" height="1108"><figcaption>ก่อนพ่นสี · มุมมองจากโดรน</figcaption></figure>
-          <figure><img src="/assets/ban-don-rayong/painted-01.webp" alt="หลังคาบ้านที่บ้านดอน ระยองหลังพ่นสีเสร็จ" loading="lazy" width="1477" height="1108"><figcaption>หลังพ่นสีเสร็จ · มุมมองจากโดรน</figcaption></figure>
+          <figure><picture><source media="(max-width: 620px)" srcset="/assets/ban-don-rayong/painted-01-mobile.webp"><img src="/assets/ban-don-rayong/painted-01.webp" alt="หลังคาบ้านที่บ้านดอน ระยองหลังพ่นสีเสร็จ" loading="lazy" width="1477" height="1108"></picture><figcaption>หลังพ่นสีเสร็จ · มุมมองจากโดรน</figcaption></figure>
         </div>
         <div class="latest-gallery-group">
           <h3 class="gallery-title">ภาพก่อนดำเนินงาน</h3>
@@ -100,10 +104,11 @@
         <div class="latest-gallery-group">
           <h3 class="gallery-title">ภาพหลังพ่นสีหลังคาเสร็จ</h3>
           <div class="work-grid latest-gallery" aria-label="ภาพหลังพ่นสีหลังคา บ้านดอน ระยอง">
-            <figure class="work-item featured"><img src="/assets/ban-don-rayong/painted-01.webp" alt="ผลงานพ่นสีหลังคาบ้านบ้านดอน ระยอง มุมที่ 1" loading="lazy" width="1477" height="1108"><figcaption>หลังพ่นสีเสร็จ · มุมที่ 1</figcaption></figure>
+            <figure class="work-item featured"><picture><source media="(max-width: 620px)" srcset="/assets/ban-don-rayong/painted-01-mobile.webp"><img src="/assets/ban-don-rayong/painted-01.webp" alt="ผลงานพ่นสีหลังคาบ้านบ้านดอน ระยอง มุมที่ 1" loading="lazy" width="1477" height="1108"></picture><figcaption>หลังพ่นสีเสร็จ · มุมที่ 1</figcaption></figure>
             <figure class="work-item"><img src="/assets/ban-don-rayong/painted-02.webp" alt="ผลงานพ่นสีหลังคาบ้านบ้านดอน ระยอง มุมที่ 2" loading="lazy" width="1477" height="1108"><figcaption>หลังพ่นสีเสร็จ · มุมที่ 2</figcaption></figure>
             <figure class="work-item"><img src="/assets/ban-don-rayong/painted-03.webp" alt="ผลงานพ่นสีหลังคาบ้านบ้านดอน ระยอง มุมที่ 3" loading="lazy" width="1477" height="1108"><figcaption>หลังพ่นสีเสร็จ · มุมที่ 3</figcaption></figure>
           </div>
+        </div>
         </div>
       </div>
     </section>
