@@ -166,7 +166,7 @@ h2 { margin: 0; color: var(--blue-dark); font-size: clamp(30px, 4vw, 46px); line
 .gallery-title { margin: 0 0 16px; color: var(--blue-dark); font-size: 23px; }
 .latest-gallery .work-item { aspect-ratio: 4 / 3; }
 .latest-gallery .work-item.featured { min-height: 420px; }
-.mobile-card-link, .mobile-card-cta, .project-detail-toggle { display: none; }
+.mobile-card-link, .mobile-card-cta, .project-detail-toggle, .project-preview-grid { display: none; }
 .project-details { scroll-margin-top: 90px; }
 
 .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
@@ -248,6 +248,14 @@ h2 { margin: 0; color: var(--blue-dark); font-size: clamp(30px, 4vw, 46px); line
   .split { gap: 34px; }
   .steps, .work-grid, .contact-grid, .before-after, .footer-grid { grid-template-columns: 1fr; }
   .job-facts { grid-template-columns: 1fr; gap: 8px; margin-bottom: 18px; }
+  .project-preview-grid { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 0 0 16px; padding: 4px; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: white; cursor: pointer; box-shadow: 0 8px 24px rgba(20, 32, 51, .1); }
+  .project-preview-item { position: relative; display: block; overflow: hidden; aspect-ratio: 4 / 3; border-radius: 7px; background: #dfe7ed; }
+  .project-preview-item img { width: 100%; height: 100%; object-fit: cover; }
+  .project-preview-item::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(7, 28, 48, .88)); }
+  .project-preview-item em { position: absolute; z-index: 1; right: 9px; bottom: 7px; left: 9px; color: white; font-size: 12px; font-style: normal; font-weight: 800; text-align: left; }
+  .project-preview-item.more::before { content: ""; position: absolute; z-index: 1; inset: 0; background: rgba(6, 63, 118, .58); }
+  .project-preview-item.more strong { position: absolute; z-index: 2; inset: 0; display: grid; place-items: center; color: white; font-size: 28px; }
+  .project-preview-grid:focus-visible { outline: 4px solid var(--blue); outline-offset: 3px; }
   .job-facts li { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 11px 13px; border-left-width: 3px; border-radius: 4px; }
   .job-facts span { margin-top: 0; text-align: right; font-size: 14px; }
   .project-detail-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 4px; padding: 16px; color: white; background: var(--blue-dark); border: 0; border-radius: 10px; text-align: left; cursor: pointer; box-shadow: 0 8px 20px rgba(6, 63, 118, .18); }
