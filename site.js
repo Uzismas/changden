@@ -39,17 +39,24 @@
     node.textContent = new Date().getFullYear();
   });
 
-  const projectToggle = document.querySelector('[data-project-toggle]');
+  const projectToggles = document.querySelectorAll('[data-project-toggle], [data-project-preview]');
   const projectDetails = document.querySelector('[data-project-details]');
 
-  if (projectToggle && projectDetails) {
-    projectToggle.addEventListener('click', function () {
+  if (projectToggles.length && projectDetails) {
+    projectToggles.forEach(function (projectToggle) {
+      projectToggle.addEventListener('click', function () {
       const open = projectDetails.classList.toggle('open');
-      projectToggle.setAttribute('aria-expanded', String(open));
-      projectToggle.querySelector('b').textContent = open ? '−' : '＋';
+      projectToggles.forEach(function (toggle) {
+        toggle.setAttribute('aria-expanded', String(open));
+        const symbol = toggle.querySelector('b');
+        if (symbol) {
+          symbol.textContent = open ? '−' : '＋';
+        }
+      });
       if (open) {
         projectDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
+    });
     });
   }
 
