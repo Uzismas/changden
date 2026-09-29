@@ -1,5 +1,17 @@
-const redisUrl = process.env.UPSTASH_REDIS_REST_URL;
-const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN;
+// Vercel environment values are sometimes pasted from a .env file with quotes
+// or a trailing slash. Normalize those forms before constructing REST requests.
+function envValue(name) {
+  const raw = process.env[name];
+  if (typeof raw !== 'string') return '';
+  const value = raw.trim();
+  if (value.length >= 2 && ((value[0] === '"' && value[value.length - 1] === '"') || (value[0] === "'" && value[value.length - 1] === "'"))) {
+    return value.slice(1, -1).trim();
+  }
+  return value;
+}
+
+const redisUrl = envValue('UPSTASH_REDIS_REST_URL').replace(/\/+$/, '');
+const redisToken = envValue('UPSTASH_REDIS_REST_TOKEN');
 const keyPrefix = 'changden:stats';
 
 function isConfigured() {

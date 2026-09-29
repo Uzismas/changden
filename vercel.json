@@ -5,6 +5,16 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/stats",
+      "destination": "/stats.html",
+      "permanent": false
+    },
+    {
+      "source": "/statistics",
+      "destination": "/stats.html",
+      "permanent": false
     }
   ],
   "headers": [
