@@ -11,6 +11,10 @@
       if ('requestIdleCallback' in window) requestIdleCallback(loadTag, { timeout: 3000 }); else setTimeout(loadTag, 1500);
     }, { once: true });
   </script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>บริการทาสีหลังคา กันซึม ซ่อมหลังคารั่ว | ช่างเด่น</title>
@@ -54,7 +58,7 @@
   <header class="site-header">
     <div class="container nav-shell">
       <a class="brand" href="/" aria-label="ช่างเด่น หน้าหลัก"><img src="/assets/logo.webp" alt="โลโก้ช่างเด่น" width="500" height="500"></a>
-      <nav class="nav-links" data-menu aria-label="เมนูหลัก"><a href="/">หน้าหลัก</a><a href="/roof-painting.html" aria-current="page">บริการงานหลังคา</a><a href="/work.html">ผลงาน</a><a href="/contact.html">ติดต่อเรา</a></nav>
+      <nav class="nav-links" data-menu aria-label="เมนูหลัก"><a href="/">หน้าหลัก</a><a href="/roof-painting.html" aria-current="page">บริการงานหลังคา</a><a href="/work.html">ผลงาน</a><a href="/contact.html">ติดต่อเรา</a><a href="/stats.html">สถิติเข้าชม</a></nav>
       <div class="nav-actions"><a class="icon-btn line" href="https://line.me/ti/p/~den432524" target="_blank" rel="noopener" aria-label="ติดต่อทาง LINE"><img src="/assets/LINE_logo.webp" alt=""></a><a class="icon-btn phone" href="tel:0956862586" aria-label="โทร 095-686-2586">☎</a><button class="icon-btn menu-button" type="button" data-menu-button aria-label="เปิดเมนู" aria-expanded="false">☰</button></div>
     </div>
   </header>

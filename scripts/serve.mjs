@@ -4,6 +4,7 @@ import { extname, join, normalize } from 'node:path';
 
 const root = process.cwd();
 const port = Number(process.env.PORT || 4173);
+const localStats = { total: 0, days: {}, months: {}, pages: {}, events: {} };
 const mimeTypes = {
   '.css': 'text/css; charset=utf-8',
   '.html': 'text/html; charset=utf-8',
@@ -20,6 +21,51 @@ const mimeTypes = {
 
 createServer((request, response) => {
   const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
+
+  if (pathname === '/api/stats') {
+    const now = new Date();
+    const day = now.toISOString().slice(0, 10);
+    const month = day.slice(0, 7);
+    const sendJson = (status, payload) => {
+      response.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' });
+      response.end(JSON.stringify(payload));
+    };
+
+    if (request.method === 'GET') {
+      const rows = (values) => Object.entries(values).map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count).slice(0, 10);
+      sendJson(200, { configured: true, metrics: { total: localStats.total, today: localStats.days[day] || 0, month: localStats.months[month] || 0, pages: rows(localStats.pages), events: rows(localStats.events) } });
+      return;
+    }
+
+    if (request.method === 'POST') {
+      let body = '';
+      request.on('data', (chunk) => { body += chunk; });
+      request.on('end', () => {
+        try {
+          const payload = JSON.parse(body || '{}');
+          const page = typeof payload.page === 'string' && payload.page.startsWith('/') ? payload.page.split(/[?#]/)[0].slice(0, 160) : '/';
+          const event = typeof payload.event === 'string' ? payload.event.replace(/[^a-zA-Z0-9_.-]/g, '').slice(0, 60) : '';
+          if (!event) {
+            localStats.total += 1;
+            localStats.days[day] = (localStats.days[day] || 0) + 1;
+            localStats.months[month] = (localStats.months[month] || 0) + 1;
+            localStats.pages[page] = (localStats.pages[page] || 0) + 1;
+          } else {
+            localStats.events[event] = (localStats.events[event] || 0) + 1;
+          }
+          sendJson(202, { recorded: true });
+        } catch {
+          sendJson(400, { error: 'Invalid JSON' });
+        }
+      });
+      return;
+    }
+
+    response.setHeader('Allow', 'GET, POST');
+    sendJson(405, { error: 'Method not allowed' });
+    return;
+  }
+
   const relativePath = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
   const filePath = normalize(join(root, relativePath));
 
