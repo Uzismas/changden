@@ -45,7 +45,12 @@ function redisCommand(commands) {
     body: JSON.stringify(commands)
   }).then(async (result) => {
     if (!result.ok) throw new Error(`Redis request failed with ${result.status}`);
-    return result.json();
+    const payload = await result.json();
+    if (Array.isArray(payload)) {
+      const failed = payload.find((item) => item && item.error);
+      if (failed) throw new Error(`Redis command failed: ${String(failed.error).slice(0, 160)}`);
+    }
+    return payload;
   });
 }
 
