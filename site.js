@@ -1,4 +1,20 @@
 (function () {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', 'AW-18365659298');
+
+  let googleAdsLoaded = false;
+  function loadGoogleAds() {
+    if (googleAdsLoaded || document.querySelector('script[data-google-ads]')) return;
+    googleAdsLoaded = true;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18365659298';
+    script.dataset.googleAds = 'true';
+    document.head.appendChild(script);
+  }
+
   document.querySelectorAll('[data-menu]').forEach(function (navigation) {
     if (!navigation.querySelector('a[href="/stats.html"]')) {
       const statsLink = document.createElement('a');
@@ -198,9 +214,7 @@
   }
 
   function reportConversion(sendTo, url, navigateAfterReport) {
-    if (typeof window.gtag !== 'function') {
-      return false;
-    }
+    loadGoogleAds();
 
     let navigated = false;
     const navigate = function () {
