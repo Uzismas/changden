@@ -11,7 +11,10 @@
   <meta name="description" content="สถิติการเข้าชมเว็บไซต์ช่างเด่น แยกตามช่วงเวลา หน้าเว็บ และช่องทางติดต่อ">
   <meta name="robots" content="noindex,nofollow">
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="stylesheet" href="/assets/site.css?v=20261027-seo-mobile">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@600;700&family=Noto+Sans+Thai+Looped:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/site.css?v=20261108-aerial2">
 </head>
 <body data-stats-page>
   <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
@@ -20,15 +23,15 @@
       <a class="brand" href="/" aria-label="ช่างเด่น หน้าหลัก"><img src="/assets/logo-nav.webp" alt="โลโก้ช่างเด่น" width="160" height="160"></a>
       <nav class="nav-links" data-menu aria-label="เมนูหลัก">
         <a href="/">หน้าหลัก</a>
-        <a href="/roof-painting.html">บริการงานหลังคา</a>
+        <a href="/roof-painting.html">พ่นสีหลังคาบ้าน</a><a href="/roof-leak-repair.html">ซ่อมหลังคารั่ว</a>
         <a href="/work.html">ผลงาน</a>
         <a href="/contact.html">ติดต่อเรา</a>
         <a href="/stats.html" aria-current="page">สถิติเข้าชม</a>
       </nav>
       <div class="nav-actions">
         <a class="icon-btn line" href="https://line.me/ti/p/~den432524" target="_blank" rel="noopener" aria-label="ติดต่อทาง LINE"><img src="/assets/LINE_logo.webp" alt="" width="250" height="250"></a>
-        <a class="icon-btn phone" href="tel:0956862586" aria-label="โทร 095-686-2586">☎</a>
-        <button class="icon-btn menu-button" type="button" data-menu-button aria-label="เปิดเมนู" aria-expanded="false">☰</button>
+        <a class="icon-btn phone" href="tel:0956862586" aria-label="โทร 095-686-2586"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        <button class="icon-btn menu-button" type="button" data-menu-button aria-label="เปิดเมนู" aria-expanded="false"><svg class="icon icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       </div>
     </div>
   </header>
@@ -37,7 +40,6 @@
     <section class="page-hero stats-hero">
       <div class="container">
         <nav class="breadcrumbs" aria-label="เส้นทางหน้า"><a href="/">หน้าหลัก</a><span>/</span><span>สถิติเข้าชม</span></nav>
-        <p class="kicker">เว็บไซต์ช่างเด่น</p>
         <h1>สถิติเข้าชมเว็บไซต์</h1>
         <p>ดูภาพรวมการเข้าชมหน้าเว็บและการติดต่อจากผู้เข้าชมในรูปแบบที่อ่านง่าย</p>
       </div>
@@ -46,7 +48,7 @@
     <section class="stats-dashboard" aria-labelledby="stats-title">
       <div class="container">
         <div class="stats-toolbar">
-          <div><p class="kicker">ภาพรวม</p><h2 id="stats-title">ตัวเลขการเข้าชม</h2><p class="stats-start-date">เริ่มบันทึกข้อมูล: 30 กันยายน 2569</p></div>
+          <div><h2 id="stats-title">ตัวเลขการเข้าชม</h2><p class="stats-start-date">เริ่มบันทึกข้อมูล: 30 กันยายน 2569</p></div>
           <div class="stats-toolbar-actions"><span class="stats-status" data-stats-status aria-live="polite">กำลังโหลดข้อมูล...</span><button class="button outline" type="button" data-stats-refresh>↻ รีเฟรช</button></div>
         </div>
         <div class="stats-grid" data-stats-dashboard>
@@ -56,16 +58,16 @@
           <article class="stat-card contact"><span class="stat-label">กิจกรรมติดต่อ</span><strong class="stat-value" data-stat="contact">—</strong><span class="stat-note">โทร, LINE และปุ่มสำคัญ</span></article>
         </div>
         <div class="stats-panels">
-          <section class="stats-panel" aria-labelledby="pages-title"><div class="stats-panel-head"><div><p class="kicker">Page views</p><h2 id="pages-title">หน้าที่มีผู้เข้าชม</h2></div><span class="stats-panel-icon">↗</span></div><ol class="stats-list" data-stats-pages><li class="stats-empty">กำลังโหลดข้อมูล...</li></ol></section>
-          <section class="stats-panel" aria-labelledby="events-title"><div class="stats-panel-head"><div><p class="kicker">Events</p><h2 id="events-title">กิจกรรมที่เกิดขึ้น</h2></div><span class="stats-panel-icon">◎</span></div><ul class="stats-list" data-stats-events><li class="stats-empty">กำลังโหลดข้อมูล...</li></ul></section>
+          <section class="stats-panel" aria-labelledby="pages-title"><div class="stats-panel-head"><div><h2 id="pages-title">หน้าที่มีผู้เข้าชม</h2></div><span class="stats-panel-icon">↗</span></div><ol class="stats-list" data-stats-pages><li class="stats-empty">กำลังโหลดข้อมูล...</li></ol></section>
+          <section class="stats-panel" aria-labelledby="events-title"><div class="stats-panel-head"><div><h2 id="events-title">กิจกรรมที่เกิดขึ้น</h2></div><span class="stats-panel-icon">◎</span></div><ul class="stats-list" data-stats-events><li class="stats-empty">กำลังโหลดข้อมูล...</li></ul></section>
         </div>
         <p class="stats-footnote">ข้อมูลนี้นับจากการเปิดหน้าเว็บและการกดปุ่มสำคัญ โดยไม่แสดงชื่อ เบอร์โทร หรือข้อมูลส่วนตัวของผู้ชม</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-grid"><div><div class="footer-brand">ช่างเด่น</div><p>ทีมช่างงานหลังคา รับทาสี พ่นเซรามิกกันความร้อน กันซึม และซ่อมแซมรอยรั่ว สำหรับบ้าน อาคาร โรงงาน และโกดัง</p></div><div><h2>เมนู</h2><div class="footer-links"><a href="/">หน้าหลัก</a><a href="/roof-painting.html">บริการงานหลังคา</a><a href="/work.html">ผลงาน</a><a href="/contact.html">ติดต่อเรา</a><a href="/stats.html">สถิติเข้าชม</a></div></div><div><h2>ติดต่อ</h2><div class="footer-links"><a href="tel:0956862586">โทร 095-686-2586</a><a href="https://line.me/ti/p/~den432524" target="_blank" rel="noopener">LINE ID: den432524</a><a href="mailto:changden.official@gmail.com">changden.official@gmail.com</a></div></div></div><div class="container footer-bottom">© <span data-year>2026</span> ช่างเด่น สงวนลิขสิทธิ์</div></footer>
-  <div class="floating-contact" aria-label="ช่องทางติดต่อด่วน"><a class="float-line" href="https://line.me/ti/p/~den432524" target="_blank" rel="noopener" aria-label="ติดต่อ LINE"><img src="/assets/LINE_logo.webp" alt=""></a><a class="float-call" href="tel:0956862586" aria-label="โทร 095-686-2586">☎</a></div>
+  <footer class="site-footer"><div class="container footer-grid"><div><div class="footer-brand">ช่างเด่น</div><p>ทีมช่างรับพ่นสีหลังคาบ้านและซ่อมหลังคารั่วซึม รับงานทั่วประเทศไทย</p></div><div><h2>เมนู</h2><div class="footer-links"><a href="/">หน้าหลัก</a><a href="/roof-painting.html">พ่นสีหลังคาบ้าน</a><a href="/roof-leak-repair.html">ซ่อมหลังคารั่ว</a><a href="/work.html">ผลงาน</a><a href="/contact.html">ติดต่อเรา</a><a href="/stats.html">สถิติเข้าชม</a></div></div><div><h2>ติดต่อ</h2><div class="footer-links"><a href="tel:0956862586">โทร 095-686-2586</a><a href="https://line.me/ti/p/~den432524" target="_blank" rel="noopener">LINE ID: den432524</a><a href="mailto:changden.official@gmail.com">changden.official@gmail.com</a></div></div></div><div class="container footer-bottom">© <span data-year>2026</span> ช่างเด่น สงวนลิขสิทธิ์</div></footer>
+  <div class="floating-contact" aria-label="ช่องทางติดต่อด่วน"><a class="float-line" href="https://line.me/ti/p/~den432524" target="_blank" rel="noopener" aria-label="ติดต่อ LINE"><img src="/assets/LINE_logo.webp" alt=""></a><a class="float-call" href="tel:0956862586" aria-label="โทร 095-686-2586"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a></div>
   <script src="/site.js" defer></script>
 </body>
 </html>

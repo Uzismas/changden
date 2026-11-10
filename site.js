@@ -45,7 +45,6 @@
       document.body.classList.toggle('menu-open', open);
       menuButton.setAttribute('aria-expanded', String(open));
       menuButton.setAttribute('aria-label', open ? 'ปิดเมนู' : 'เปิดเมนู');
-      menuButton.textContent = open ? '×' : '☰';
     }
 
     menuButton.addEventListener('click', function () {
@@ -72,6 +71,38 @@
     });
   }
 
+  document.querySelectorAll('[data-compare]').forEach(function (frame) {
+    const range = frame.querySelector('[data-compare-range]');
+    if (!range) return;
+    function setPos(value) { frame.style.setProperty('--pos', value + '%'); }
+    range.addEventListener('input', function () { setPos(range.value); });
+    // One orchestrated moment: the seam sweeps from "before" to the middle once on load.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const start = 88, end = Number(range.value), duration = 1400;
+    let t0 = null, touched = false;
+    range.addEventListener('pointerdown', function () { touched = true; }, { once: true });
+    range.addEventListener('keydown', function () { touched = true; }, { once: true });
+    function tick(now) {
+      if (touched) return;
+      if (t0 === null) t0 = now;
+      const p = Math.min((now - t0) / duration, 1);
+      const eased = 1 - Math.pow(2, -10 * p);
+      setPos(start + (end - start) * eased);
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    setPos(start);
+    setTimeout(function () { requestAnimationFrame(tick); }, 350);
+  });
+
+  // Tuck the floating LINE/phone buttons while the hero's own LINE/phone buttons are visible.
+  const heroActions = document.querySelector('.aerial .actions');
+  const floating = document.querySelector('.floating-contact');
+  if (heroActions && floating && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      floating.classList.toggle('is-tucked', entries[0].isIntersecting);
+    }).observe(heroActions);
+  }
+
   document.querySelectorAll('[data-year]').forEach(function (node) {
     node.textContent = new Date().getFullYear();
   });
@@ -85,10 +116,6 @@
       const open = projectDetails.classList.toggle('open');
       projectToggles.forEach(function (toggle) {
         toggle.setAttribute('aria-expanded', String(open));
-        const symbol = toggle.querySelector('b');
-        if (symbol) {
-          symbol.textContent = open ? '−' : '＋';
-        }
       });
       if (open) {
         projectDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });

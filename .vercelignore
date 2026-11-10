@@ -1,2 +1,13 @@
 pagespeed-mobile.json
 pagespeed-report.html
+.env*
+.deploy-ffa4412/
+.agents/
+.impeccable/
+.claude/
+PRODUCT.md
+DESIGN.md
+ANALYTICS.md
+skills-lock.json
+scripts/
+SEO_KEYWORD_MAP.md
