@@ -74,7 +74,11 @@
   document.querySelectorAll('[data-compare]').forEach(function (frame) {
     const range = frame.querySelector('[data-compare-range]');
     if (!range) return;
-    function setPos(value) { frame.style.setProperty('--pos', value + '%'); }
+    // --dx moves the handle with transform so the seam sweep is not counted as layout shift.
+    // Width is cached from ResizeObserver so setPos never reads layout (no forced reflow).
+    let width = 0, current = Number(range.value);
+    function setPos(value) { current = Number(value); frame.style.setProperty('--pos', value + '%'); frame.style.setProperty('--dx', ((current - 50) / 100 * width) + 'px'); }
+    if (window.ResizeObserver) new ResizeObserver(function (entries) { width = entries[0].contentRect.width; setPos(current); }).observe(frame);
     range.addEventListener('input', function () { setPos(range.value); });
     // One orchestrated moment: the seam sweeps from "before" to the middle once on load.
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
